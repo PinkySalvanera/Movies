@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieDescriptionActivity">
+
+    <ImageView
+        android:id="@+id/ivDesPoster"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/m1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDesTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Movie"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivDesPoster" />
+
+    <TextView
+        android:id="@+id/tvDesPlotLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:text="Plot"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/rbDesRating"
+        app:layout_constraintTop_toBottomOf="@+id/rbDesRating" />
+
+    <RatingBar
+        android:id="@+id/rbDesRating"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/tvDesTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvDesTitle" />
+
+    <TextView
+        android:id="@+id/tvDPlot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:text="Plot"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="@+id/tvDesPlotLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvDesPlotLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
