@@ -34,11 +34,11 @@ class MainActivity : AppCompatActivity() {
 
         val movieDetailIntent = Intent(this, MovieDescriptionActivity::class.java)
 
-        movieDetailIntent.putExtra(Constants.MOVIE, selectedMovie)
-        //movieDetailIntent.putExtra(Constants.TITLE, selectedMovie.title)
-        //movieDetailIntent.putExtra(Constants.POSTER, selectedMovie.poster)
-        //movieDetailIntent.putExtra(Constants.RATING, selectedMovie.rating)
-        //movieDetailIntent.putExtra(Constants.PLOT, selectedMovie.plot)
+        //movieDetailIntent.putExtra(Constants.MOVIE, selectedMovie)
+        movieDetailIntent.putExtra(Constants.TITLE, selectedMovie.title)
+        movieDetailIntent.putExtra(Constants.POSTER, selectedMovie.poster)
+        movieDetailIntent.putExtra(Constants.RATING, selectedMovie.rating)
+        movieDetailIntent.putExtra(Constants.PLOT, selectedMovie.plot)
 
         startActivity(movieDetailIntent)
     }
